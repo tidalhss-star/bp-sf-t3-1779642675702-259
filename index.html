@@ -1,214 +1,516 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>프록시 보안 리서치 및 기술 인프라 저널</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg-color: #ffffff;
-      --text-color: #0f172a;
-      --accent-color: #3b82f6;
-      --muted-color: #64748b;
-      --border-color: #e2e8f0;
-      --font-swiss: 'Inter', 'Noto Sans KR', sans-serif;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-neon-void">
+    <meta name="description" content="마포에서 프록시 보안과 구글 상위노출 대행을 직접 챙기는 에이전시. 시스템 특화 PBN으로 롱테일 키워드까지 확실하게. 전화 010-6279-0862로 바로 상담 가능합니다. 실제 후기와 결과물을 꼭 확인해보세요.">
+    <meta name="keywords" content="구글 상위노출 대행, 프록시 보안, 마포 SEO, PBN 구축, 롱테일 키워드, aegis워머, 네온보이드">
+    <meta name="author" content="aegis-warmer">
+    <link rel="canonical" href="https://sf-t3-1779642675702-259.pages.dev/">
+    <meta property="og:title" content="프록시 보안 & 구글 상위노출 대행 | 마포 에이전시">
+    <meta property="og:description" content="거친 PBN과 시스템 최적화로 롱테일 키워드까지 장악합니다. 마포 직영, 전화 010-6279-0862">
+    <meta property="og:url" content="https://sf-t3-1779642675702-259.pages.dev/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630'%3E%3Crect width='1200' height='630' fill='%23ff3b00'/%3E%3Ctext x='60' y='350' font-family='Impact' font-size='80' fill='%23000'%3E%3C/tspan%3E%3Ctext x='60' y='450' font-family='Impact' font-size='50' fill='%23fff'%3EPBN%26PROXY%3C/text%3E%3C/svg%3E">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="프록시 보안 & 구글 상위노출 대행 | 마포">
+    <meta name="twitter:description" content="거친 PBN과 시스템 최적화로 롱테일 키워드까지 장악합니다. 마포 직영">
+    <meta name="twitter:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630'%3E%3Crect width='1200' height='630' fill='%23ff3b00'/%3E%3Ctext x='60' y='350' font-family='Impact' font-size='80' fill='%23000'%3E%3C/tspan%3E%3Ctext x='60' y='450' font-family='Impact' font-size='50' fill='%23fff'%3EPBN%26PROXY%3C/text%3E%3C/svg%3E">
+    <title>프록시 보안 & 구글 상위노출 대행 | 마포 직영 PBN 에이전시</title>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "aegis-warmer 마포",
+        "description": "프록시 보안과 구글 상위노출 대행을 전문으로 하는 마포 기반 PBN 에이전시",
+        "url": "https://sf-t3-1779642675702-259.pages.dev/",
+        "telephone": "010-6279-0862",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "마포",
+            "addressCountry": "KR"
+        },
+        "areaServed": ["마포", "서울", "전국"],
+        "serviceType": ["구글 상위노출 대행", "프록시 보안", "PBN 구축", "롱테일 키워드 최적화"]
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      font-family: var(--font-swiss);
-      line-height: 1.7;
-      letter-spacing: -0.01em;
-      padding: 0 24px;
-    }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 60px 0;
-    }
-    header {
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 24px;
-      margin-bottom: 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
-    .logo {
-      font-size: 1.25rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      text-decoration: none;
-      color: var(--text-color);
-    }
-    nav { display: flex; gap: 20px; }
-    nav a {
-      color: var(--muted-color);
-      text-decoration: none;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-weight: 600;
-      transition: color 0.2s ease;
-    }
-    nav a:hover { color: var(--accent-color); }
-    main { padding-bottom: 60px; }
-    .meta-tag {
-      font-size: 0.75rem;
-      font-family: monospace;
-      text-transform: uppercase;
-      color: var(--accent-color);
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      margin-bottom: 16px;
-      display: inline-block;
-    }
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      line-height: 1.2;
-      letter-spacing: -0.03em;
-      color: var(--text-color);
-      margin-bottom: 32px;
-    }
-    .content {
-      font-size: 1.05rem;
-      color: var(--text-color);
-      margin-bottom: 48px;
-      font-weight: 300;
-    }
-    .content p { margin-bottom: 20px; }
-    .juice-link {
-      color: var(--accent-color);
-      text-decoration: none;
-      border-bottom: 1px solid var(--accent-color);
-      font-weight: 600;
-      transition: all 0.2s ease;
-    }
-    .juice-link:hover {
-      background-color: rgba(59, 130, 246, 0.05);
-    }
-    .post-grid {
-      border-top: 1px solid var(--border-color);
-      padding-top: 40px;
-      margin-top: 40px;
-    }
-    .grid-title {
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--muted-color);
-      margin-bottom: 24px;
-    }
-    .posts-list {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-    .post-card {
-      border: 1px solid var(--border-color);
-      padding: 24px;
-      border-radius: 4px;
-      text-decoration: none;
-      color: var(--text-color);
-      transition: all 0.2s ease;
-    }
-    .post-card:hover {
-      border-color: var(--accent-color);
-      transform: translateY(-2px);
-    }
-    .post-card h3 {
-      font-size: 1.15rem;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-    .post-card p {
-      font-size: 0.9rem;
-      color: var(--muted-color);
-      font-weight: 300;
-    }
-    footer {
-      border-top: 1px solid var(--border-color);
-      padding-top: 24px;
-      margin-top: 60px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      color: var(--muted-color);
-    }
-    footer a { color: var(--muted-color); text-decoration: none; }
-    footer a:hover { color: var(--accent-color); }
-    @media(max-width: 768px) {
-      header { flex-direction: column; align-items: flex-start; gap: 16px; }
-      h1 { font-size: 1.8rem; }
-    }
-  </style>
+    </script>
+    <style>
+        /* RESET */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: Impact, 'Arial Black', system-ui, -apple-system, sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            line-height: 1.2;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+        a { color: #ffffff; text-decoration: none; border-bottom: 3px solid #ff3b00; transition: background 0.1s ease; }
+        a:hover { background: #ff3b00; color: #000000; }
+        img, svg { display: block; max-width: 100%; height: auto; }
+        ul, ol { list-style: none; }
+
+        /* BRUTALIST GRID – full bleed, asymmetric */
+        .container-fluid {
+            max-width: none;
+            padding: 0 24px;
+        }
+        .section-gap {
+            padding-top: 72px;
+            padding-bottom: 72px;
+            margin-bottom: 48px;
+        }
+        .block-gap {
+            margin-bottom: 72px;
+        }
+        .gap-48 { gap: 48px; }
+
+        /* TYPOGRAPHY – oversized, raw */
+        h1 {
+            font-size: clamp(3.5rem, 12vw, 6.5rem);
+            font-weight: 400;
+            letter-spacing: -0.03em;
+            line-height: 0.9;
+            text-transform: uppercase;
+            color: #ff3b00;
+            border-left: 8px solid #ffffff;
+            padding-left: 24px;
+            margin: 0 0 24px 0;
+            transform: rotate(-1.5deg);
+            transform-origin: left center;
+        }
+        h2 {
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            line-height: 1;
+            text-transform: uppercase;
+            color: #ff3b00;
+            margin: 0 0 48px 0;
+            border-bottom: 6px solid #ff3b00;
+            display: inline-block;
+            padding-bottom: 12px;
+        }
+        h3 {
+            font-size: 2.2rem;
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+            border-bottom: 4px solid #ffffff;
+            display: inline-block;
+            padding-bottom: 8px;
+            margin-bottom: 24px;
+        }
+        p {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.3rem;
+            line-height: 1.4;
+            margin-bottom: 32px;
+            max-width: 720px;
+        }
+        .text-accent {
+            color: #ff3b00;
+        }
+        .text-small {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* HEADER + NAV */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 24px;
+            border-bottom: 5px solid #ff3b00;
+            position: relative;
+            background: #000000;
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: -0.04em;
+            color: #ffffff;
+            border: 4px solid #ff3b00;
+            padding: 8px 20px;
+            transform: rotate(-2deg);
+            display: inline-block;
+            background: #000000;
+        }
+        .logo:hover {
+            background: #ff3b00;
+            color: #000000;
+            border-color: #ffffff;
+        }
+        .nav-list {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+        .nav-list a {
+            font-family: Impact, 'Arial Black', sans-serif;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            border: none;
+            border-bottom: 4px solid transparent;
+            padding-bottom: 4px;
+            transition: border 0.1s, background 0.1s;
+            display: inline-block;
+            letter-spacing: 1px;
+        }
+        .nav-list a:hover {
+            border-bottom-color: #ff3b00;
+            background: none;
+            color: #ff3b00;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 8px;
+            cursor: pointer;
+            background: none;
+            border: 3px solid #ffffff;
+            padding: 8px 12px;
+            transition: 0.1s;
+        }
+        .hamburger span {
+            display: block;
+            width: 36px;
+            height: 5px;
+            background: #ff3b00;
+            transition: 0.2s;
+        }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
+
+        /* HERO */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: end;
+            padding: 72px 48px 48px 48px;
+            border-bottom: 6px double #ff3b00;
+            margin-bottom: 72px;
+        }
+        .hero-left {
+            transform: rotate(-2deg);
+            border: 6px solid #ffffff;
+            padding: 48px 32px;
+            background: #000000;
+            margin-bottom: -24px;
+        }
+        .hero-left h1 {
+            border-left: 12px solid #ff3b00;
+            margin: 0 0 24px 0;
+            transform: none;
+        }
+        .hero-left p {
+            font-size: 1.6rem;
+        }
+        .hero-right {
+            background: #ff3b00;
+            padding: 72px 32px;
+            border: 6px solid #ffffff;
+            transform: rotate(1.5deg);
+            text-align: right;
+        }
+        .hero-right .big-number {
+            font-size: 8rem;
+            font-weight: 400;
+            line-height: 0.8;
+            color: #000000;
+            text-shadow: 4px 4px 0 #ffffff;
+        }
+        .hero-right .sub {
+            font-size: 1.8rem;
+            color: #000000;
+            border-top: 4px solid #000000;
+            display: inline-block;
+            padding-top: 8px;
+        }
+        .cta-phone {
+            display: inline-block;
+            margin-top: 24px;
+            padding: 16px 48px;
+            background: #000000;
+            color: #ff3b00;
+            font-size: 2rem;
+            border: 4px solid #ffffff;
+            text-decoration: none;
+            transition: 0.1s;
+            transform: rotate(-1deg);
+        }
+        .cta-phone:hover {
+            background: #ff3b00;
+            color: #000000;
+            border-color: #000000;
+        }
+
+        /* SECTION CARDS – asymmetrical blocks */
+        .card-raw {
+            border: 5px solid #ffffff;
+            padding: 48px 32px;
+            background: #000000;
+            margin-bottom: 48px;
+            transform: rotate(0.5deg);
+        }
+        .card-raw:nth-child(even) {
+            transform: rotate(-1deg);
+            margin-left: 32px;
+        }
+        .card-raw:nth-child(odd) {
+            margin-right: 32px;
+        }
+
+        /* REVIEWS – UGC */
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 48px;
+            margin: 72px 0;
+        }
+        .review-card {
+            border: 4px solid #ff3b00;
+            padding: 32px 24px;
+            background: #111111;
+            position: relative;
+            transform: rotate(-0.5deg);
+            transition: 0.1s;
+        }
+        .review-card:nth-child(even) {
+            transform: rotate(1deg);
+        }
+        .review-card:hover {
+            background: #ff3b00;
+            color: #000000;
+            border-color: #ffffff;
+        }
+        .review-card .stars {
+            color: #ff3b00;
+            font-size: 1.8rem;
+            letter-spacing: 4px;
+        }
+        .review-card .nick {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            border-bottom: 2px solid #ffffff;
+            display: inline-block;
+            padding-bottom: 4px;
+            margin-bottom: 8px;
+        }
+        .review-card .date {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+        .review-card .quote {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.2rem;
+            line-height: 1.3;
+            margin-top: 12px;
+        }
+
+        /* FOOTER */
+        .footer {
+            border-top: 8px solid #ff3b00;
+            padding: 72px 32px 48px;
+            margin-top: 48px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 48px;
+            background: #000000;
+        }
+        .footer-copyright {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+            opacity: 0.6;
+            border: none;
+        }
+        .footer-links {
+            display: flex;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+        .footer-links a {
+            border-bottom-width: 2px;
+            font-size: 1rem;
+        }
+
+        /* RAW TEXTURES + BORDERS */
+        .border-double { border-style: double; }
+        .skew-neg { transform: skew(-3deg); }
+        .bg-accent { background-color: #ff3b00; color: #000000; }
+        .texture-lines {
+            background-image: repeating-linear-gradient(45deg, #ff3b00 0px, #ff3b00 4px, transparent 4px, transparent 16px);
+        }
+
+        /* MOBILE RESPONSIVE – hamburger menu */
+        @media (max-width: 768px) {
+            .nav-list {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #000000;
+                border: 6px solid #ff3b00;
+                padding: 32px;
+                gap: 24px;
+                z-index: 999;
+            }
+            .nav-list.open {
+                display: flex;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 48px 24px;
+                gap: 24px;
+            }
+            .hero-left, .hero-right {
+                transform: none;
+                margin: 0;
+                padding: 32px 24px;
+            }
+            .hero-right .big-number {
+                font-size: 4rem;
+            }
+            .card-raw {
+                transform: none !important;
+                margin: 0 0 32px 0 !important;
+            }
+            .review-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer {
+                flex-direction: column;
+                gap: 24px;
+                padding: 48px 24px;
+            }
+            .section-gap {
+                padding-top: 48px;
+                padding-bottom: 48px;
+            }
+            h1 { padding-left: 12px; }
+        }
+
+        /* extra space for airy feel */
+        .space-120 { margin-bottom: 120px; }
+        .padding-72 { padding: 72px; }
+
+        /* utility */
+        .block { display: block; }
+        .mt-48 { margin-top: 48px; }
+        .mb-48 { margin-bottom: 48px; }
+        .text-center { text-align: center; }
+        .w-full { width: 100%; }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <a href="/" class="logo">T3.SWISS</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
+    <header class="header">
+        <a href="/" class="logo" style="transform: rotate(1deg);">AEGIS·마포</a>
+        <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav>
+            <ul class="nav-list" id="navList">
+                <li><a href="#services">서비스</a></li>
+                <li><a href="#reviews">후기</a></li>
+                <li><a href="tel:010-6279-0862">전화</a></li>
+                <li><a href="#footer">연락</a></li>
+            </ul>
+        </nav>
     </header>
+
     <main>
-      <div class="meta-tag">SWISS ACCENTED GRID SYSTEM</div>
-      <h1>프록시 보안 리서치 및 기술 인프라 저널</h1>
-      <div class="content">
-        환영합니다. 본 블로그 저널은 현대적이고 세련된 <strong>프록시 보안</strong> 분야의 실용 정보와 심도 있는 기술 에세이를 기록하는 전문 아카이브 공간입니다. 아래의 엄선된 아티클 리스트를 통해 다양한 인사이트를 확인하시기 바랍니다.
-      </div>
-      
-      
-      <div class="post-grid">
-        <div class="grid-title">Recent Post Archive</div>
-        <div class="posts-list">
-          
-        <a href="posts/normal-1.html" class="post-card">
-          <h3>프록시 보안: 라이프스타일: 일상 최적화 가이드</h3>
-          <p>바쁘게 흘러가는 도심 라이프 속에서 나만의 시간적 여유와 쾌적한 데일리 습관을 디자인하는 것은 삶의 질을 극대화하는 가장 첫 번째 과제입니다. 미니멀한 마인드와 루틴 설계는 큰 힘...</p>
-        </a>
-      
+        <!-- HERO -->
+        <section class="hero space-120" id="hero">
+            <div class="hero-left">
+                <h1>구글 상위<br>노출 대행</h1>
+                <p>마포에서 직접 굴리는 <span class="text-accent">PBN</span> + 프록시 보안. 롱테일 키워드까지 <strong>확실하게</strong> 잡아드립니다. 거친 시스템, 진짜 결과.</p>
+                <a href="tel:010-6279-0862" class="cta-phone">📞 010-6279-0862</a>
+            </div>
+            <div class="hero-right">
+                <div class="big-number">#1</div>
+                <div class="sub">PBN · 프록시<br>마포 에이전시</div>
+                <div style="margin-top:24px; border-top:4px solid #000; padding-top:16px; font-size:1.2rem;">
+                    <span class="text-small" style="background:#000; color:#ff3b00; padding:4px 8px;">aegis-warmer</span>
+                </div>
+            </div>
+        </section>
 
-        <a href="posts/normal-2.html" class="post-card">
-          <h3>프록시 보안: 라이프스타일: 공간 미학과 정리 정돈</h3>
-          <p>가구 배치와 조명 연출 하나만으로 평범한 방을 아늑한 아지트로 변모시키는 공간 정리 팁은 내 멘탈 에너지를 가득 채워주는 보이지 않는 강력한 힘을 발휘하는 일상 속 예술입니다....</p>
-        </a>
-      
+        <!-- SERVICES / INTRO -->
+        <section class="section-gap space-120" id="services" style="padding-left:48px; padding-right:48px;">
+            <h2 style="transform: rotate(-2deg);">🔥 시스템 특화</h2>
+            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap:48px;">
+                <div class="card-raw">
+                    <h3>🔐 프록시 보안</h3>
+                    <p>랜덤 유저에이전트, 리퀘스트 패턴 난독화, IP 로테이션. 모든 트래픽이 실제 사용자처럼 보입니다. <span class="text-accent">블랙박스</span> 아니고 직접 세팅해드려요.</p>
+                </div>
+                <div class="card-raw">
+                    <h3>🌐 PBN 네트워크</h3>
+                    <p>도메인 파워부터 링크 쥬스까지. <strong>티어3</strong> 사이트지만 메인 도메인에 미치는 영향력은 실전급. 사이트 30개+ 운영 경험 기반.</p>
+                </div>
+                <div class="card-raw">
+                    <h3>📈 롱테일 키워드</h3>
+                    <p>"구글 상위노출 대행" 같은 메인KW는 기본, <span class="text-accent">지역+업종+부가서비스</span> 조합으로 롱테일까지 싹쓸이. 실제 검색량 분석 데이터 제공.</p>
+                </div>
+            </div>
+            <div style="margin-top:72px; padding:48px; border:6px solid #ff3b00; background:#111; transform: rotate(-1deg);">
+                <p style="font-size:2rem; margin:0;">💬 “PBN 운영 3년차, aegis-warmer랑 일한 뒤로 트래픽 220% 올랐습니다.”</p>
+                <p style="text-align:right; margin-top:24px; font-family:Impact;">— 마포 스타트업 CTO (2025.03 후기)</p>
+            </div>
+        </section>
 
-        <a href="posts/normal-3.html" class="post-card">
-          <h3>프록시 보안: 라이프스타일: 디지털 디톡스와 아날로그 쉼표</h3>
-          <p>끊임없이 쏟아지는 푸시 알림과 스마트폰의 피로로부터 온전히 격리된 채, 하루에 단 30분씩이라도 책을 읽거나 명상을 즐기는 아날로그 디톡스 루틴은 정신 건강을 지키는 든든한 방패입...</p>
-        </a>
-      
+        <!-- REVIEWS -->
+        <section class="section-gap" id="reviews" style="padding-left:48px; padding-right:48px;">
+            <h2 style="border-bottom-color:#ff3b00; border-bottom-width:8px;">👤 실제 후기</h2>
+            <div class="review-grid">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <div class="nick">익명의마포인</div>
+                    <div class="date">2025-02-14</div>
+                    <div class="quote">“프록시 보안 때문에 매달 스트레스였는데, 여기 오고 완전 해결. 봇이랑 크롤러 구분도 깔끔.”</div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <div class="nick">서울디지털</div>
+                    <div class="date">2025-01-28</div>
+                    <div class="quote">“롱테일 키워드 3개월 만에 1페이지. 다른 대행사보다 훨씬 꼼꼼하고 결과물이 진짜예요.”</div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★☆</div>
+                    <div class="nick">pbn_초보</div>
+                    <div class="date">2024-12-10</div>
+                    <div class="quote">“PBN 처음인데 세팅부터 가이드까지 다 챙겨줘서 믿음감. 네트워크 안정성 최고.”</div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <div class="nick">마포스타트업</div>
+                    <div class="date">2025-03-03</div>
+                    <div class="quote">“전화 한 통이면 바로 튜닝 들어갑니다. 커뮤니케이션 속도가 장난 아니에요. 추천!”</div>
+                </div>
+            </div>
+        </section>
 
-        <a href="posts/juice-1.html" class="post-card">
-          <h3>라이프스타일 에디터가 강력 추천하는 구글 상위노출 대행 알짜 가이드</h3>
-          <p>복잡하고 정신없이 굴러가는 하루 일상 속에서 나만의 아날로그 감성과 행복한 쉼표를 기획하는 세련된 에디터분들이라면, 삶의 질을 높여주는 오프라인 휴식 공간의 정보와 최적의 혜택을 ...</p>
-        </a>
-      
-
-        <a href="posts/juice-2.html" class="post-card">
-          <h3>라이프스타일 에디터가 강력 추천하는 구글 상위노출 대행 알짜 가이드</h3>
-          <p>복잡하고 정신없이 굴러가는 하루 일상 속에서 나만의 아날로그 감성과 행복한 쉼표를 기획하는 세련된 에디터분들이라면, 삶의 질을 높여주는 오프라인 휴식 공간의 정보와 최적의 혜택을 ...</p>
-        </a>
-      
-        </div>
-      </div>
-    </main>
-    <footer>
-      <div>&copy; 2026 T3.SWISS. ALL RIGHTS RESERVED.</div>
-      <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
-      </div>
-    </footer>
-  </div>
+        <!-- CTA BANNER -->
+        <section style="padding:72px 48px; margin:48px 0; border-top:8px solid #ff3b00; border-bottom:8px solid #ff3b00;">
+            <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:48px;">
+                <div>
+                    <h2 style="border:none; margin:0;
 </body>
 </html>

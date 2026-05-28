@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-neon-void">
+    <meta name="description" content="마포에서 직접 운영하는 프록시 보안 및 구글 상위노출 대행 에이전시의 블로그. 실제 PBN 운영 노하우와 롱테일 키워드 전략을 담은 실전 정보를 공유합니다.">
+    <meta name="keywords" content="구글 상위노출 대행, 프록시 보안, 마포 SEO, PBN 구축, 롱테일 키워드, 블로그, 에이전시, aegis워머">
+    <meta name="author" content="aegis-warmer">
+    <link rel="canonical" href="https://sf-t3-1779642675702-259.pages.dev/blog">
+    <meta property="og:title" content="블로그 | 프록시 보안 & 구글 상위노출 대행 | 마포 에이전시">
+    <meta property="og:description" content="프록시 보안과 구글 상위노출의 실제 사례와 팁. 마포 에이전시가 직접 운영하는 PBN 노하우를 블로그에서 확인하세요.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sf-t3-1779642675702-259.pages.dev/blog">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>블로그 | 프록시 보안 & 구글 상위노출 대행 | 마포 에이전시</title>
+    <style>
+        /* RESET */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+        body {
+            font-family: 'Pretendard', system-ui, -apple-system, sans-serif;
+            background: #0a0a0f;
+            color: #e0e0e0;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        a {
+            color: #00ffcc;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        a:hover {
+            color: #ff00aa;
+        }
+        img, svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        ul, ol {
+            list-style: none;
+        }
+
+        /* BRUTALIST GRID */
+        .container-fluid {
+            width: 100%;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        .section-gap {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+        .block-gap {
+            margin-bottom: 2rem;
+        }
+        .gap-48 {
+            gap: 2.5rem;
+        }
+
+        /* TYPOGRAPHY */
+        h1 {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: -0.03em;
+            color: #ffffff;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+        h1 small {
+            display: block;
+            font-size: 0.4em;
+            font-weight: 300;
+            color: #00ffcc;
+            text-transform: lowercase;
+            letter-spacing: 0.2em;
+        }
+        h2 {
+            font-size: clamp(1.8rem, 5vw, 3rem);
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+        }
+        h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #00ffcc;
+            margin-bottom: 0.75rem;
+        }
+        p {
+            font-size: 1rem;
+            margin-bottom: 1.2rem;
+            color: #b0b0c0;
+        }
+        .text-strong {
+            color: #ffffff;
+            font-weight: 700;
+        }
+        .text-accent {
+            color: #ff00aa;
+        }
+        .text-mono {
+            font-family: 'SF Mono', 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        /* NAVIGATION – brutalist */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            background: rgba(10, 10, 15, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 2px solid #00ffcc;
+            padding: 0.8rem 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav .logo {
+            font-weight: 800;
+            font-size: 1.4rem;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+        }
+        nav .logo span {
+            color: #ff00aa;
+        }
+        nav ul {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        nav ul li a {
+            font-weight: 500;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #b0b0c0;
+            padding: 0.3rem 0.1rem;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+        }
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: #00ffcc;
+            border-bottom-color: #00ffcc;
+        }
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0.5rem;
+        }
+        .hamburger-menu span {
+            width: 28px;
+            height: 3px;
+            background: #00ffcc;
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+        .tel-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            background: #ff00aa;
+            color: #ffffff !important;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            border: 2px solid #ff00aa;
+            transition: all 0.2s;
+        }
+        .tel-link:hover {
+            background: transparent;
+            color: #ff00aa !important;
+            border-color: #ff00aa;
+        }
+
+        /* BLOG POST CARD */
+        .blog-card {
+            background: #12121a;
+            border: 2px solid #2a2a3a;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: border-color 0.3s;
+            position: relative;
+        }
+        .blog-card:hover {
+            border-color: #00ffcc;
+        }
+        .blog-card .date {
+            font-size: 0.8rem;
+            color: #606070;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+        }
+        .blog-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 0.75rem;
+        }
+        .blog-card p {
+            font-size: 0.95rem;
+            color: #a0a0b0;
+            line-height: 1.7;
+        }
+        .blog-card .read-more {
+            display: inline-block;
+            margin-top: 1rem;
+            font-weight: 600;
+            color: #ff00aa;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border-bottom: 2px solid transparent;
+        }
+        .blog-card .read-more:hover {
+            border-bottom-color: #ff00aa;
+        }
+
+        /* FAQ – 아코디언 */
+        .faq-item {
+            border-bottom: 1px solid #2a2a3a;
+            padding: 1.2rem 0;
+        }
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #ffffff;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+        .faq-question::after {
+            content: '+';
+            color: #ff00aa;
+            font-size: 1.6rem;
+            font-weight: 300;
+            transition: transform 0.2s;
+        }
+        .faq-question.open::after {
+            content: '−';
+            transform: rotate(180deg);
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            color: #a0a0b0;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        .faq-answer.show {
+            max-height: 500px;
+        }
+        .faq-answer p {
+            margin-top: 0.8rem;
+            color: #a0a0b0;
+        }
+
+        /* FOOTER */
+        footer {
+            border-top: 2px solid #00ffcc;
+            padding: 2rem 1rem;
+            margin-top: 4rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+        footer p {
+            font-size: 0.8rem;
+            color: #606070;
+            margin: 0;
+        }
+
+        /* RESPONSIVE 768 */
+        @media (max-width: 768px) {
+            nav ul {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                height: 100vh;
+                background: #0a0a0f;
+                border-left: 2px solid #00ffcc;
+                flex-direction: column;
+                justify-content: center;
+                padding: 2rem;
+                gap: 2rem;
+                transition: right 0.4s ease;
+            }
+            nav ul.open {
+                right: 0;
+            }
+            .hamburger-menu {
+                display: flex;
+            }
+            .hamburger-menu.open span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            .hamburger-menu.open span:nth-child(2) {
+                opacity: 0;
+            }
+            .hamburger-menu.open span:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+            .tel-link {
+                margin-top: 1rem;
+            }
+            .container-fluid {
+                padding-left: 0.75rem;
+                padding-right: 0.75rem;
+            }
+            .blog-card {
+                padding: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 네비게이션 -->
+    <nav>
+        <div class="logo">aegis<span>warmer</span></div>
+        <button class="hamburger-menu" id="hamburger" aria-label="메뉴 열기">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul id="nav-menu">
+            <li><a href="/">홈</a></li>
+            <li><a href="/about">소개</a></li>
+            <li><a href="/service">서비스</a></li>
+            <li><a href="/blog" class="active">블로그</a></li>
+            <li><a href="/contact">문의</a></li>
+            <li><a href="tel:010-6279-0862" class="tel-link">010-6279-0862</a></li>
+        </ul>
+    </nav>
+
+    <!-- 메인 히어로 (블로그) -->
+    <section class="container-fluid section-gap" style="padding-top: 7rem;">
+        <h1>
+            블로그
+            <small>마포 에이전시의 실제 기록</small>
+        </h1>
+        <p class="text-mono" style="max-width: 700px;">
+            프록시 보안, PBN 운영, 구글 상위노출 대행 — 현장에서 직접 부딪히며 배운 이야기들.<br>
+            과장 빼고, 실제로 효과 본 전략만 공유합니다.
+        </p>
+    </section>
+
+    <!-- 블로그 포스트 1편 -->
+</body>
+</html>
